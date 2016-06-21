@@ -4,9 +4,8 @@
   <section class="content-wrap">
     <div class="container">
       <div class="row">
-        <main class="col-md-8 main-content">
-          <post-list></post-list>
-        </main>
+
+        <post-list></post-list>
 
         <aside class="col-md-4 sidebar">
           <!-- start widget -->
@@ -17,7 +16,7 @@
 
           <!-- start tag cloud widget -->
           <div class="widget">
-            <tags></tags>
+            <tag-cloud></tag-cloud>
           </div>
           <!-- end tag cloud widget -->
 
@@ -42,14 +41,14 @@
   import HeaderCom from '../components/Header.vue'
   import PostList from '../components/PostList.vue'
   import EaseMusic from '../components/EaseMusic.vue'
-  import Tags from '../components/Tags.vue'
+  import TagCloud from '../components/TagCloud.vue'
 
   export default {
     components: {
       HeaderCom,
       PostList,
       EaseMusic,
-      Tags
+      TagCloud
     }
   }
 </script>

@@ -1,25 +1,22 @@
 <template>
-    <header-component/>
-    <div>this is template body</div>
-    <other-component/>
+  <h4 class="title">我的音乐</h4>
+  <div class="content community">
+    <iframe
+      frameborder="no"
+      border="0"
+      marginwidth="0"
+      marginheight="0"
+      width=308
+      height=450
+      src="http://music.163.com/outchain/player?type=0&id=365546314&auto=1&height=430"
+    >
+    </iframe>
+  </div>
 </template>
 <style>
-    body{
-        background-color:#ff0000;
-    }
 </style>
 <script>
-    import HeaderComponent from './components/header.vue'
-    import OtherComponent from './components/other.vue'
-    export default{
-        data(){
-            return{
-                msg:'hello vue'
-            }
-        },
-        components:{
-            'other-component':OtherComponent,
-            HeaderComponent,
-        }
-    }
+  export default{
+    props: ['musicUrl']
+  }
 </script>

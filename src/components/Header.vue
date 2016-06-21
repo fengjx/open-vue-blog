@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-sm-12">
         <h1>
-            使用vue重写，颤抖吧，凡人！
+            别看我像杀猪的，其实我是写诗的！
         </h1>
       </div>
 

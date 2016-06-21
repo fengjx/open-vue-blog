@@ -4,8 +4,9 @@
   <section class="content-wrap">
     <div class="container">
       <div class="row">
+
         <main class="col-md-8 main-content">
-          <post-list></post-list>
+          <post></post>
         </main>
 
         <aside class="col-md-4 sidebar">
@@ -40,14 +41,14 @@
 
 <script>
   import HeaderCom from '../components/Header.vue'
-  import PostList from '../components/PostList.vue'
+  import Post from '../components/Post.vue'
   import EaseMusic from '../components/EaseMusic.vue'
   import Tags from '../components/Tags.vue'
 
   export default {
     components: {
       HeaderCom,
-      PostList,
+      Post,
       EaseMusic,
       Tags
     }

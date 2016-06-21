@@ -39,10 +39,8 @@
 
 <script>
   export default{
-    props(){
-      return ['item']
-    },
-    data(){
+    props: ['item'],
+    data () {
       return {
         msg: 'hello vue'
       }
