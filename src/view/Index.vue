@@ -11,7 +11,7 @@
         <aside class="col-md-4 sidebar">
           <!-- start widget -->
           <div class="widget">
-              <ease-music></Ease-Music>
+              <ease-music></ease-music>
           </div>
           <!-- end widget -->
 

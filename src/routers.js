@@ -1,30 +1,25 @@
-'use strict'
+import Index from './view/Index.vue';
+import PostPage from './view/PostPage.vue';
+import TagCloud from './view/TagCloud.vue';
+
 
 export default function (router) {
   router.map({
     '/': {				//首页
       name: 'index',
-      component: function (resolve) {
-        require(['./views/index.vue'], resolve);
-      }
+      component: Index
     },
     /* 404路由 */
     '*': {
-      component: function (resolve) {
-        require(['./views/index.vue'], resolve);
-      }
+      component: Index
     },
     '/post/:id': {  // 文章详情
       name: 'post',
-      component: function (resolve) {
-        require(['./views/post.vue'], resolve);
-      }
+      component: PostPage
     },
     '/tagCloud': {  // 标签云
       name: 'tagCloud',
-      component: function (resolve) {
-        require(['./views/post.vue'], resolve);
-      }
+      component: TagCloud
     }
   })
 }

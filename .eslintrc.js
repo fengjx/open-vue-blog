@@ -1,10 +1,16 @@
 module.exports = {
   root: true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
   parserOptions: {
     sourceType: 'module'
   },
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
-  extends: 'standard',
+  // extends: 'standard',
+  extends: 'eslint:recommended',
   // required to lint *.vue files
   plugins: [
     'html'
@@ -14,14 +20,6 @@ module.exports = {
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-    // 注释风格要不要有空格什么的
-    "spaced-comment": 0,
-    // 多余的分号
-    "no-extra-semi": 0,
-    // 行尾缺少分号可能导致一些意外情况
-    "no-unexpected-multiline": 2,
-    // 空代码块
-    "no-empty": 1
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
   }
 }
