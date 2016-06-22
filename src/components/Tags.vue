@@ -5,7 +5,7 @@
       {{tag.name}}
     </a>
 
-    <a href="/tag-cloud/">...</a>
+    <a v-link="{ name: 'tagCloud'}">...</a>
   </div>
 
 </template>

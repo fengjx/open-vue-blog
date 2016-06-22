@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import routerMap from './routers';
 import filters from './filters';
+import App from './App.vue'
 import './assets/style.css';
 
 /* eslint-disable no-new */
@@ -21,9 +22,9 @@ let router = new VueRouter({
 
 // 登录中间验证，页面需要登录而没有登录的情况直接跳转登录
 router.beforeEach(() => {
+  window.scrollTo(0, 0)
 });
 
-let app = Vue.extend({});
 routerMap(router);
 
-router.start(app, '#app');
+router.start(App, '#app');

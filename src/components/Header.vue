@@ -35,7 +35,9 @@
           </div>
           <div class="collapse navbar-collapse" id="main-menu">
             <ul class="menu">
-              <li class="nav-current" role="presentation"><a href="/">首页</a></li>
+              <li class="nav-current">
+                <a v-link="{name:'index'}">首页</a>
+              </li>
               <li  role="presentation"><a href="http://lumen.golaravel.com" title="Lumen中文文档"  target="_blank">java</a></li>
               <li  role="presentation"><a href="http://wenda.golaravel.com" title="Laravel问答社区"  target="_blank">web前端</a></li>
               <li  role="presentation"><a href="/laravel/docs/" title="Laravel 中文文档" target="_blank">专题</a></li>
