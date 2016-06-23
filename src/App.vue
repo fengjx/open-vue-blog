@@ -26,7 +26,9 @@
             <h4 class="title">社区</h4>
             <div class="content community">
               <p>QQ群：462694081</p>
-              <p><a href="http://wenda.golaravel.com/" title="Laravel中文网问答社区" target="_blank" onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '问答社区'])"><i class="fa fa-comments"></i> 问答社区</a></p>
+              <p><a href="http://wenda.golaravel.com/" title="Laravel中文网问答社区" target="_blank"
+                    onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '问答社区'])"><i class="fa fa-comments"></i>
+                问答社区</a></p>
             </div>
           </div>
           <!-- end widget -->
@@ -42,13 +44,15 @@
   import HeaderCom from './components/Header.vue'
   import EaseMusic from './components/EaseMusic.vue'
   import Tags from './components/Tags.vue'
+  import store from './vuex/store/store'
 
   export default {
     components: {
       HeaderCom,
       EaseMusic,
       Tags
-    }
+    },
+    store
   }
 </script>
 <style>
