@@ -3,7 +3,7 @@ import VueRouter from 'vue-router';
 import routerMap from './routers';
 import filters from './filters';
 import App from './App.vue'
-import './assets/style.css';
+import './assets/css/style.css';
 
 /* eslint-disable no-new */
 
