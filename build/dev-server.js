@@ -64,6 +64,6 @@ module.exports = app.listen(port, function (err) {
   }
   console.log('Listening at http://localhost:' + port + '\n')
   setTimeout(function () {
-    open('http://localhost:' + port)
+    open('http://blog.fengjx.com')
   }, 5000)
 })

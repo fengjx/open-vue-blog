@@ -37,20 +37,28 @@
       </div>
     </div>
   </section>
-
+  <alert :msg="alertMsg.msg" :show="alertMsg.show"></alert>
 </template>
 
 <script>
   import HeaderCom from './components/Header.vue'
   import EaseMusic from './components/EaseMusic.vue'
   import Tags from './components/Tags.vue'
-  import store from './vuex/store/store'
+  import Alert from './components/Alert.vue'
+  import store from './vuex/store'
+  import {alertMsg} from './vuex/getters'
 
   export default {
+    vuex: {
+      getters: {
+        alertMsg
+      }
+    },
     components: {
       HeaderCom,
       EaseMusic,
-      Tags
+      Tags,
+      Alert
     },
     store
   }

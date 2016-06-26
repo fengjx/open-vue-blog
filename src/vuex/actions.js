@@ -1,32 +1,42 @@
-import * as types from './mutation-types'
+import Vue from 'vue';
+import VueResource from 'vue-resource';
+import {API_URL_ROOT} from '../config';
+import * as types from './mutation-types';
 
 
-const pageData = {
-  page: 1,
-  total: 100,
-  pageSize: 10,
-  list: [
-    {
-      id: '123dfsdf21312',
-      title: 'title1',
-      anthor: 'FengJianxin',
-      desc: 'ssssss',
-      img: 'http://img.club.pchome.net/kdsarticle/2013/11small/21/fd548da909d64a988da20fa0ec124ef3_1000x750.jpg',
-      createDate: '2016-06-20'
-    },
-    {
-      id: '123dfsasdadf21312',
-      title: 'title2',
-      anthor: 'FengJianxin',
-      desc: 'ssssssasdsdasd',
-      img: 'http://img.club.pchome.net/kdsarticle/2013/11small/21/fd548da909d64a988da20fa0ec124ef3_1000x750.jpg',
-      createDate: '2016-06-21'
+Vue.use(VueResource);
+
+// HTTP相关
+Vue.http.options.credentials = true;
+
+Vue.http.interceptors.push((request, next) => {
+
+  // modify request
+  request.method = 'POST';
+  request.headers = request.headers || {};
+  request.headers["Request-Flag"] = 'ajax';
+
+  // continue to next interceptor
+  next();
+});
+
+
+export const loadPostList = ({dispatch}, categoryId, page = 1) => {
+  let url = `${API_URL_ROOT}/pageList?page=${page}`;
+  if (categoryId) {
+    url += `&categoryId=${categoryId}`;
+  }
+  Vue.http.post(url).then((response) => {
+    if(response.ok){
+      dispatch(types.GET_POST_LIST, response.data);
+    }else{
+      dispatch(types.ALERT, "获取文章列表失败!");
     }
-  ]
-};
+  }, (e) => {
+    dispatch(types.ALERT, e);
+  });
 
-export const loadPostList = ({ dispatch }, categoryId) => {
-  dispatch(types.GET_POST_LIST, pageData)
+
 };
 
 

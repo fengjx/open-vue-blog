@@ -1,16 +1,21 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import middlewares from './middlewares'
-import postList from './modules/postList'
+import common from './modules/common'
+import post from './modules/post'
+import category from './modules/category'
 
 Vue.use(Vuex);
-Vue.config.debug = true;
 
 const debug = process.env.NODE_ENV !== 'production';
 
+Vue.config.debug = debug;
+
 export default new Vuex.Store({
   modules: {
-    postList
+    common,
+    post,
+    category
   },
   strict: debug,
   middlewares

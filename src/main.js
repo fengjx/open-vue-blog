@@ -27,4 +27,4 @@ router.beforeEach(() => {
 
 routerMap(router);
 
-router.start(App, '#app');
+router.start(Vue.extend(App), '#app');
