@@ -12,7 +12,7 @@ Vue.http.options.credentials = true;
 Vue.http.interceptors.push((request, next) => {
 
   // modify request
-  request.method = 'POST';
+  // request.method = 'POST';
   request.headers = request.headers || {};
   request.headers["Request-Flag"] = 'ajax';
 
@@ -26,7 +26,7 @@ export const loadPostList = ({dispatch}, categoryId, page = 1) => {
   if (categoryId) {
     url += `&categoryId=${categoryId}`;
   }
-  Vue.http.post(url).then((response) => {
+  Vue.http.get(url).then((response) => {
     if(response.ok){
       dispatch(types.GET_POST_LIST, response.data);
     }else{
