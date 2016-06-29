@@ -2,18 +2,19 @@
   <article id="item-{{item.id}}" data-id="{{item.id}}" class="post tag-lumen tag-xin-ban-ben-fa-bu">
 
     <div class="post-head">
-      <h1 class="post-title"><a href="/post/lumen-5-2-is-released/">{{item.title}}</a></h1>
+      <h1 class="post-title">
+        <a v-link="{ name: 'post', params: { id: item.id }}">{{item.title}}</a>
+      </h1>
       <div class="post-meta">
         <span class="author">
-          作者：
-          <a href="/author/wangsai/">{{item.author}}</a>
+          作者：{{item.author}}
         </span> &bull;
         <time class="post-date" datetime="2016年1月8日星期五上午10点33分" title="2016年1月8日星期五上午10点33分">2016年1月8日</time>
       </div>
     </div>
     <div class="featured-media">
       <a v-link="{ name: 'post', params: { id: item.id }}">
-        <img src="{{item.img}}" alt="{{item.title}}">
+        <img v-bind:src="{{item.img}}" alt="{{item.title}}">
       </a>
     </div>
     <div class="post-content">
