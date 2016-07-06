@@ -1,7 +1,5 @@
 <template>
-  <div id="list-{{item.id}}" v-for="item in postPageList.rows">
-    <post-item :item="item"></post-item>
-  </div>
+    <post-item :item="item" v-for="item in postPageList.rows"></post-item>
 </template>
 <style>
 </style>

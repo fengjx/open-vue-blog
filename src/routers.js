@@ -1,6 +1,7 @@
 import PostList from './view/PostList.vue'
 import Post from './view/Post.vue'
 import TagCloud from './view/TagCloud.vue'
+import TagPosts from './view/TagPosts.vue'
 
 
 export default function (router) {
@@ -20,6 +21,10 @@ export default function (router) {
     '/tag-cloud': {  // 标签云
       name: 'tagCloud',
       component: TagCloud
+    },
+    'tag/:id': {
+      name: 'tag',
+      component: TagPosts
     }
   })
 }
