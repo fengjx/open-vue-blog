@@ -6,9 +6,9 @@
       border="0"
       marginwidth="0"
       marginheight="0"
-      width=308
-      height=450
-      src="http://music.163.com/outchain/player?type=0&id=365546314&auto=1&height=430"
+      width={{easeMusic.width}}
+      height={{easeMusic.height}}
+      v-bind:src="easeMusic.url"
     >
     </iframe>
   </div>
@@ -16,7 +16,12 @@
 <style>
 </style>
 <script>
+  import {easeMusic} from '../vuex/getters'
   export default{
-    props: ['musicUrl']
+    vuex: {
+      getters: {
+        easeMusic
+      }
+    }
   }
 </script>

@@ -14,7 +14,7 @@
     </div>
     <div class="featured-media" v-if="item.img">
       <a v-link="{ name: 'post', params: { id: item.id }}">
-        <img src="{{item.img}}" alt="{{item.title}}">
+        <img v-bind:src="item.img" alt="{{item.title}}">
       </a>
     </div>
     <div class="post-content">
@@ -38,17 +38,12 @@
 </template>
 
 <style>
+  @import "../assets/css/github-markdown.css";
 </style>
 
 <script>
+
   export default{
-    props: ['item'],
-    data () {
-      return {
-        msg: 'hello vue'
-      }
-    },
-    components: {
-    }
+    props: ['item']
   }
 </script>

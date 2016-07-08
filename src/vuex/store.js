@@ -4,6 +4,7 @@ import middlewares from './middlewares'
 import common from './modules/common'
 import post from './modules/post'
 import category from './modules/category'
+import tags from './modules/tags'
 
 Vue.use(Vuex);
 
@@ -15,7 +16,8 @@ export default new Vuex.Store({
   modules: {
     common,
     post,
-    category
+    category,
+    tags
   },
   strict: debug,
   middlewares

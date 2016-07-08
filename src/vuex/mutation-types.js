@@ -4,8 +4,12 @@
 export const ALERT = 'ALERT';
 
 // 文章部分
-export const GET_POST_LIST = 'GET_POST_LIST';
-export const GET = 'GET';
+export const POST_GET_LIST = 'POST_GET_LIST';
+export const POST_GET = 'POST_GET';
 
 // 分类部分
-export const GET_CATEGORY_TREE = 'GET_CATEGORY_TREE';
+export const CATEGORY_GET_TREE = 'CATEGORY_GET_TREE';
+
+// tag部分
+export const TAG_GET_LIST = 'TAG_GET_LIST';
+export const TAG_GET_TOP = 'TAG_GET_TOP';

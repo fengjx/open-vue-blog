@@ -8,7 +8,7 @@ exports.getDictName = (value) => {
   } else {
     return '';
   }
-}
+};
 
 
 exports.formatterDate = (time, fmt) => {
@@ -28,4 +28,4 @@ exports.formatterDate = (time, fmt) => {
     if (new RegExp("(" + k + ")").test(fmt))
       fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
   return fmt;
-}
+};

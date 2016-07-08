@@ -1,6 +1,6 @@
 import {
-  GET_POST_LIST,
-  GET
+  POST_GET_LIST,
+  POST_GET
 } from '../mutation-types'
 
 // initial state
@@ -11,11 +11,11 @@ const state = {
 
 // mutations
 const mutations = {
-  [GET_POST_LIST] (state, pageData) {
+  [POST_GET_LIST] (state, pageData) {
     state.pageData = pageData
   },
 
-  [GET] (state, detail) {
+  [POST_GET] (state, detail) {
     state.detail = detail
   }
 

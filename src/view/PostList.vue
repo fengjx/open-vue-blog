@@ -24,7 +24,7 @@
     },
     route: {
       data (transition) {
-        var categoryId = transition.to.params.categoryId;
+        let categoryId = transition.to.params.categoryId;
         this.loadPostList(categoryId, this.page);
       }
     },
