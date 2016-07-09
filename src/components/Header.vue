@@ -1,24 +1,20 @@
 <template>
   <!-- start header -->
   <header class="main-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>
             别看我像杀猪的，其实我是写诗的！
-        </h1>
-      </div>
+          </h1>
+        </div>
 
-      <div class="col-sm-12 hide">
-        <a href="" class="btn btn-default btn-doc" target="_blank">5.1 中文文档</a>
-        <a href="" class="btn btn-default btn-doc" target="_blank">5.0 中文文档</a>
-        <a href="" class="btn btn-default btn-doc" target="_blank">4.2 中文文档</a>
-        <a href="" class="btn btn-default btn-doc" target="_blank">4.1 中文文档</a>
-        <a href="" class="btn btn-default btn-doc" target="_blank">Lumen 中文文档</a>
-        <a href="" class="btn btn-default btn-doc" target="_blank">问答社区</a>
+        <div class="col-sm-12 hide">
+          <a href="" class="btn btn-default btn-doc" target="_blank">天天微信平台</a>
+          <a href="" class="btn btn-default btn-doc" target="_blank">问答社区</a>
+        </div>
       </div>
     </div>
-  </div>
   </header>
   <!-- end header -->
 
@@ -30,19 +26,31 @@
           <div class="navbar-header">
               <span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu">
               <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
               <i class="fa fa-bars"></i>
               </span>
           </div>
-          <div class="collapse navbar-collapse" id="main-menu">
+          <div class="collapse navbar-collapse">
             <ul class="menu">
               <li class="nav-current">
                 <a v-link="{name:'index'}">首页</a>
               </li>
-              <li  role="presentation"><a href="http://lumen.golaravel.com" title="Lumen中文文档"  target="_blank">java</a></li>
-              <li  role="presentation"><a href="http://wenda.golaravel.com" title="Laravel问答社区"  target="_blank">web前端</a></li>
-              <li  role="presentation"><a href="/laravel/docs/" title="Laravel 中文文档" target="_blank">专题</a></li>
-              <li  role="presentation"><a href="/post/laravel-documents-offline-package/" title="下载 Laravel 中文文档离线版">转载</a></li>
-              <li  role="presentation"><a href="http://www.laravel.com/api/" title="Laravel 框架 API" target="_blank">生活</a></li>
+
+              <template v-for="menu in tree">
+                <li v-if="menu.isLeef">
+                  <a v-link="{name:'category', params: {id: menu.id}}">{{menu.name}}</a>
+                </li>
+                <dropdown v-else :menu="menu"></dropdown>
+              </template>
+
+              <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+              </form>
             </ul>
           </div>
         </div>
@@ -53,15 +61,15 @@
 
 </template>
 <script>
+  import Dropdown from './Dropdown.vue';
+
   export default {
+    props: ['tree'],
     data () {
-      return {
-        // note: changing this line won't causes changes
-        // with hot-reload because the reloaded component
-        // preserves its current state and we are modifying
-        // its initial state.
-        msg: 'Hello World!'
-      }
+      return {}
+    },
+    components: {
+      Dropdown
     }
   }
 </script>

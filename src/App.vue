@@ -1,5 +1,5 @@
 <template>
-  <header-com></header-com>
+  <header-com :tree="categoryTree"></header-com>
   <!-- start site's main content area -->
   <section class="content-wrap">
     <div class="container">
@@ -40,36 +40,49 @@
       </div>
     </div>
   </section>
+  <footer-com></footer-com>
+  <to-top></to-top>
   <alert :msg="alertMsg.msg" :show="alertMsg.show"></alert>
+  <loading :show="loading.show" :text="loading.showText" ></loading>
 </template>
 
 <script>
   import HeaderCom from './components/Header.vue'
+  import FooterCom from './components/Footer.vue'
+  import BackToTop from './components/BackToTop.vue'
   import EaseMusic from './components/EaseMusic.vue'
   import Tags from './components/Tags.vue'
   import Alert from './components/Alert.vue'
+  import Loading from './components/Loading.vue'
   import store from './vuex/store'
-  import {loadTagTopList} from './vuex/actions'
-  import {alertMsg, tagsTopList} from './vuex/getters'
+  import {loadTagTopList, loadCategoryTree} from './vuex/actions'
+  import {alertMsg, tagsTopList, categoryTree, loading} from './vuex/getters'
 
   export default {
     vuex: {
       getters: {
         alertMsg,
-        tagsTopList
+        tagsTopList,
+        categoryTree,
+        loading
       },
       actions: {
-        loadTagTopList
+        loadTagTopList,
+        loadCategoryTree
       }
     },
     created: function () {
+      this.loadCategoryTree();
       this.loadTagTopList();
     },
     components: {
       HeaderCom,
+      FooterCom,
+      toTop: BackToTop,
       EaseMusic,
       Tags,
-      Alert
+      Alert,
+      Loading
     },
     store
   }

@@ -14,7 +14,7 @@
       <img v-bind:src="postDetail.img" alt="{{postDetail.title}}">
     </section>
 
-    <section class="markdown-body post-content" v-html="html">
+    <section class="markdown-body post-content" v-html="postDetail.content">
 
     </section>
 
@@ -39,7 +39,6 @@
 <style>
 </style>
 <script>
-  import md from 'markdown';
   import {loadPost} from '../vuex/actions'
   import {postDetail} from '../vuex/getters'
 
@@ -60,11 +59,6 @@
       data (transition) {
         let id = transition.to.params.id;
         this.loadPost(id);
-      }
-    },
-    computed: {
-      html: function () {
-        return md.parse(this.postDetail.content);
       }
     },
     components: {

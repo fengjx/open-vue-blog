@@ -1,10 +1,10 @@
 <template>
   <div class="cover tag-cover">
     <h3 class="tag-name">
-      标签：Composer
+      分类：{{categoryCurMenu.name}}
     </h3>
     <div class="post-count">
-      共 {{postPageList.total}} 篇文章
+      共 {{postPageList.records}} 篇文章
     </div>
   </div>
 
@@ -19,7 +19,7 @@
 <script>
   import PostItem from '../components/PostItem.vue'
   import {loadPostList} from '../vuex/actions'
-  import {postPageList} from '../vuex/getters'
+  import {postPageList, categoryCurMenu} from '../vuex/getters'
 
   export default{
     data () {
@@ -29,7 +29,8 @@
     },
     vuex: {
       getters: {
-        postPageList
+        postPageList,
+        categoryCurMenu
       },
       actions: {
         loadPostList
@@ -37,8 +38,8 @@
     },
     route: {
       data (transition) {
-        let tagId = transition.to.params.id;
-        this.loadPostList(this.page, {tagId});
+        let categoryId = transition.to.params.id;
+        this.loadPostList(this.page, {categoryId});
       }
     },
     components: {

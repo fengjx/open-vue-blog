@@ -1,4 +1,3 @@
-
 // common部分 start
 export const alertMsg = state => {
   return state.common.alert;
@@ -6,6 +5,11 @@ export const alertMsg = state => {
 
 export const easeMusic = state => {
   return state.common.easeMusic;
+};
+
+
+export const loading = state => {
+  return state.common.loading;
 };
 
 // common部分 end
@@ -24,14 +28,6 @@ export const postDetail = state => {
 // post部分 end
 
 
-// category部分 start
-export const headMenu = state => {
-  return state.category.tree;
-};
-
-// category部分 end
-
-
 // tags部分 start
 export const tagsList = state => {
   return state.tags.list;
@@ -42,4 +38,15 @@ export const tagsTopList = state => {
   return state.tags.topList;
 };
 
-// tags部分 end
+// category部分 start
+
+export const categoryTree = state => {
+  return state.category.tree;
+};
+
+export const categoryCurMenu = state => {
+  return state.category.curMenu;
+};
+
+
+// category部分 end

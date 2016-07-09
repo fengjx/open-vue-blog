@@ -2,6 +2,7 @@ import PostList from './view/PostList.vue'
 import Post from './view/Post.vue'
 import TagCloud from './view/TagCloud.vue'
 import TagPosts from './view/TagPosts.vue'
+import CategoryPosts from './view/CategoryPosts.vue'
 
 
 export default function (router) {
@@ -25,6 +26,10 @@ export default function (router) {
     'tag/:id': {
       name: 'tag',
       component: TagPosts
+    },
+    'category/:id': {
+      name: 'category',
+      component: CategoryPosts
     }
   })
 }

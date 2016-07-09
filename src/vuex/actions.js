@@ -10,7 +10,6 @@ Vue.use(VueResource);
 Vue.http.options.credentials = true;
 
 Vue.http.interceptors.push((request, next) => {
-
   // modify request
   // request.method = 'POST';
   request.headers = request.headers || {};
@@ -21,11 +20,14 @@ Vue.http.interceptors.push((request, next) => {
 });
 
 // post相关 start
-
-export const loadPostList = ({dispatch}, categoryId, page = 1) => {
+export const loadPostList = ({dispatch}, page = 1, param = {categoryId: "", tagId: ""}) => {
   let url = `${API_URL_ROOT}/pageList?page=${page}`;
-  if (categoryId) {
-    url += `&categoryId=${categoryId}`;
+  if (param.categoryId) {
+    url += `&categoryId=${param.categoryId}`;
+    dispatch(types.CATEGORY_CHANGE, param.categoryId);
+  }
+  if (param.tagId) {
+    url += `&tagId=${param.tagId}`;
   }
   Vue.http.get(url).then((response) => {
     if (response.ok) {
@@ -40,6 +42,7 @@ export const loadPostList = ({dispatch}, categoryId, page = 1) => {
 
 
 export const loadPost = ({dispatch}, id) => {
+  dispatch(types.POST_GET, {});
   if (!id) {
     return;
   }
@@ -57,6 +60,7 @@ export const loadPost = ({dispatch}, id) => {
 
 // post相关 end
 
+// tag相关 start
 
 export const loadTagList = ({dispatch}) => {
   let url = `${API_URL_ROOT}/tagList?top=0`;
@@ -84,4 +88,21 @@ export const loadTagTopList = ({dispatch}, top = 10) => {
   });
 };
 
+// tag相关 end
 
+// category相关 start
+
+export const loadCategoryTree = ({dispatch}) => {
+  let url = `${API_URL_ROOT}/categoryTree`;
+  Vue.http.get(url).then((response) => {
+    if (response.ok) {
+      dispatch(types.CATEGORY_GET_TREE, response.data);
+    } else {
+      dispatch(types.ALERT, "load category error...");
+    }
+  }, (e) => {
+    dispatch(types.ALERT, e);
+  });
+};
+
+// category相关 end

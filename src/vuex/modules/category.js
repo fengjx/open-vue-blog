@@ -1,42 +1,36 @@
 import {
-  GET_CATEGORY_TREE
-} from '../mutation-types'
+  CATEGORY_GET_TREE,
+  CATEGORY_CHANGE
+} from '../mutation-types';
+
+import * as _ from 'lodash';
+
 
 // initial state
 const state = {
-  tree: [
-    {
-      id:'1',
-      name:'首页'
-    },
-    {
-      id:'2',
-      name:'首页'
-    },
-    {
-      id:'1',
-      name:'首页'
-    },
-    {
-      id:'1',
-      name:'首页'
-    },
-    {
-      id:'1',
-      name:'首页'
-    },
-    {
-      id:'1',
-      name:'首页'
-    }
-  ],
-  curShow: ''
+  tree: [],
+  curMenu: {}
 };
 
 // mutations
 const mutations = {
-  [GET_CATEGORY_TREE] (state, category) {
-    state.tree = category
+  [CATEGORY_GET_TREE] (state, tree) {
+    state.tree = tree
+  },
+
+  [CATEGORY_CHANGE] (state, categoryId) {
+    _.forEach(state.tree, (obj) => {
+      if (obj.id == categoryId) {
+        state.curMenu = obj;
+      } else if (!obj.isLeaf) {
+        _.forEach(obj.children, (child) => {
+          if (child.id == categoryId) {
+            state.curMenu = child;
+          }
+        });
+      }
+    });
+    // state.curMenu = curMenu
   }
 };
 

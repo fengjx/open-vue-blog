@@ -885,8 +885,8 @@ pre {
 }
 #back-to-top {
   position: fixed;
-  right: 10px;
-  bottom: 10px;
+  right: 32px;
+  bottom: 20px;
   background: rgba(244, 100, 95, 0.6);
   color: #ffffff;
   text-align: center;
@@ -898,7 +898,7 @@ pre {
   background: #f4645f;
 }
 #back-to-top i {
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
 }

@@ -23,9 +23,8 @@
       }
     },
     route: {
-      data (transition) {
-        let categoryId = transition.to.params.categoryId;
-        this.loadPostList(categoryId, this.page);
+      data () {
+        this.loadPostList(this.page);
       }
     },
     components: {
