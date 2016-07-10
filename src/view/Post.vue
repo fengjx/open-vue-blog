@@ -29,10 +29,20 @@
 
   </article>
 
-  <div class="prev-next-wrap clearfix">
-    <a class="btn btn-default" href="/post/laravel-5-2-zheng-shi-fa-bu/"><i class="fa fa-angle-left fa-fw"></i>
-      Laravel 5.2 正式发布</a>
-    &nbsp;
+  <div class="about-author clearfix" v-if="postDetail.originalLink">
+    <a href="{{postDetail.originalLink}}">
+      <img src="http://image.golaravel.com/6/d4/82b9646073bef7a7d67c6cd1db987.png" alt="王赛"
+           class="avatar pull-left">
+    </a>
+
+    <div class="details">
+      <div class="author">
+        原文链接
+        <p>
+          <a href="{{postDetail.originalLink}}">{{postDetail.originalLink}}</a>
+        </p>
+      </div>
+    </div>
   </div>
 
 </template>
@@ -44,8 +54,7 @@
 
   export default{
     data () {
-      return {
-      }
+      return {}
     },
     vuex: {
       getters: {
@@ -61,7 +70,6 @@
         this.loadPost(id);
       }
     },
-    components: {
-    }
+    components: {}
   }
 </script>

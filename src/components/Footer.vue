@@ -34,7 +34,7 @@
           <div class="widget">
             <h4 class="title">关于博主</h4>
             <div class="content tag-cloud friend-links">
-              <a href="http://fengjx.com/me" title="冯建新" target="_blank">理想主义者</a>
+              <a href="http://fengjx.com/me" title="冯建新" target="_blank">别看我像杀猪的，其实我是写诗的！ </a>
             </div>
           </div>
         </div>
