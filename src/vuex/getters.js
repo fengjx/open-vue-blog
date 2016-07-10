@@ -38,6 +38,12 @@ export const tagsTopList = state => {
   return state.tags.topList;
 };
 
+export const curTag = state => {
+  return state.tags.curTag;
+};
+
+// tags部分 end
+
 // category部分 start
 
 export const categoryTree = state => {

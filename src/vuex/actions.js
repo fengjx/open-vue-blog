@@ -28,6 +28,7 @@ export const loadPostList = ({dispatch}, page = 1, param = {categoryId: "", tagI
   }
   if (param.tagId) {
     url += `&tagId=${param.tagId}`;
+    dispatch(types.TAG_CHANGE, param.tagId);
   }
   Vue.http.get(url).then((response) => {
     if (response.ok) {
@@ -69,19 +70,6 @@ export const loadTagList = ({dispatch}) => {
       dispatch(types.TAG_GET_LIST, response.data);
     } else {
       dispatch(types.ALERT, "load tag list error...");
-    }
-  }, (e) => {
-    dispatch(types.ALERT, e);
-  });
-};
-
-export const loadTagTopList = ({dispatch}, top = 10) => {
-  let url = `${API_URL_ROOT}/tagList?top=${top}`;
-  Vue.http.get(url).then((response) => {
-    if (response.ok) {
-      dispatch(types.TAG_GET_TOP, response.data);
-    } else {
-      dispatch(types.ALERT, "load top tag error...");
     }
   }, (e) => {
     dispatch(types.ALERT, e);

@@ -55,7 +55,7 @@
   import Alert from './components/Alert.vue'
   import Loading from './components/Loading.vue'
   import store from './vuex/store'
-  import {loadTagTopList, loadCategoryTree} from './vuex/actions'
+  import {loadTagList, loadCategoryTree} from './vuex/actions'
   import {alertMsg, tagsTopList, categoryTree, loading} from './vuex/getters'
 
   export default {
@@ -67,13 +67,13 @@
         loading
       },
       actions: {
-        loadTagTopList,
+        loadTagList,
         loadCategoryTree
       }
     },
     created: function () {
       this.loadCategoryTree();
-      this.loadTagTopList();
+      this.loadTagList();
     },
     components: {
       HeaderCom,

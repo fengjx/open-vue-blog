@@ -1,7 +1,7 @@
 <template>
   <div class="cover tag-cover">
     <h3 class="tag-name">
-      标签：Composer
+      标签：{{curTag.label}}
     </h3>
     <div class="post-count">
       共 {{postPageList.total}} 篇文章
@@ -19,7 +19,7 @@
 <script>
   import PostItem from '../components/PostItem.vue'
   import {loadPostList} from '../vuex/actions'
-  import {postPageList} from '../vuex/getters'
+  import {postPageList, curTag} from '../vuex/getters'
 
   export default{
     data () {
@@ -29,7 +29,8 @@
     },
     vuex: {
       getters: {
-        postPageList
+        postPageList,
+        curTag
       },
       actions: {
         loadPostList

@@ -30,7 +30,6 @@ const mutations = {
         });
       }
     });
-    // state.curMenu = curMenu
   }
 };
 

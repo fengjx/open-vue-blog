@@ -14,6 +14,8 @@ export const POST_GET = 'POST_GET';
 export const CATEGORY_GET_TREE = 'CATEGORY_GET_TREE';
 export const CATEGORY_CHANGE = 'CATEGORY_CHANGE';
 
+
 // tag部分
 export const TAG_GET_LIST = 'TAG_GET_LIST';
 export const TAG_GET_TOP = 'TAG_GET_TOP';
+export const TAG_CHANGE = 'TAG_CHANGE';
