@@ -23,15 +23,24 @@
 
           <!-- start widget -->
           <div class="widget">
-            <h4 class="title">社区</h4>
+            <h4 class="title">关于我</h4>
             <div class="content community">
-              <p>QQ群：462694081</p>
+              <p>QQ：466516623</p>
+              <p>email：fengjianxin2012@gmail.com</p>
               <p>
-                <a href="http://wenda.golaravel.com/" title="Laravel中文网问答社区" target="_blank">
+                <a href="http://fengjx.com/me" title="冯建新" target="_blank">
                   <i class="fa fa-comments"></i>
-                  问答社区
+                  个人主页
                 </a>
               </p>
+            </div>
+          </div>
+          <!-- end widget -->
+          <!-- start widget -->
+          <div class="widget">
+            <h4 class="title">优惠码</h4>
+            <div class="content community">
+              <p><a href="https://www.aliyun.com" target="_blank">阿里云</a>：o2gi8h</p>
             </div>
           </div>
           <!-- end widget -->

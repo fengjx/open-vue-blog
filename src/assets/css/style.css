@@ -662,6 +662,7 @@ pre {
 .about-author .author {
   font-size: 1.5em;
   margin-bottom: 7px;
+  word-break: break-all;
 }
 .about-author .author a:hover {
   text-decoration: none;

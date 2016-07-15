@@ -3,7 +3,6 @@ import VueResource from 'vue-resource';
 import {API_URL_ROOT} from '../config';
 import * as types from './mutation-types';
 
-
 Vue.use(VueResource);
 
 // HTTP相关

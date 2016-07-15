@@ -3,6 +3,7 @@ import Post from './view/Post.vue'
 import TagCloud from './view/TagCloud.vue'
 import TagPosts from './view/TagPosts.vue'
 import CategoryPosts from './view/CategoryPosts.vue'
+import View404 from './view/404.vue'
 
 
 export default function (router) {
@@ -11,9 +12,13 @@ export default function (router) {
       name: 'index',
       component: PostList
     },
+    '/:page': {       //首页分页
+      name: 'index',
+      component: PostList
+    },
     /* 404路由 */
     '*': {
-      component: PostList
+      component: View404
     },
     '/post/:id': {  // 文章详情
       name: 'post',
@@ -23,11 +28,11 @@ export default function (router) {
       name: 'tagCloud',
       component: TagCloud
     },
-    'tag/:id': {
+    'tag/:id/:page': {
       name: 'tag',
       component: TagPosts
     },
-    'category/:id': {
+    'category/:id/:page': {
       name: 'category',
       component: CategoryPosts
     }

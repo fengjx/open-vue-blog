@@ -21,11 +21,12 @@
           <div class="widget">
             <h4 class="title">用到的技术</h4>
             <div class="content tag-cloud">
-              <a href="http://www.oracle.com/technetwork/cn/java/index.html" title="java官网" target="_blank">vuejs</a>
-              <a href="https://spring.io" title="spring官网" target="_blank">vuex</a>
-              <a href="http://shiro.apache.org" title="shiro官网" target="_blank">vue-router</a>
-              <a href="http://www.ehcache.org" title="ehcache官网" target="_blank">vue-resource</a>
-              <a href="http://redis.io" title="redis官网" target="_blank">webpack</a>
+              <a href="http://cn.vuejs.org" title="vue官网" target="_blank">vuejs</a>
+              <a href="https://github.com/vuejs/vue-cli" title="vue-cli官网" target="_blank">vue-cli</a>
+              <a href="http://vuex.vuejs.org/" title="vuex官网" target="_blank">vuex</a>
+              <a href="http://router.vuejs.org/" title="shirovue-router官网" target="_blank">vue-router</a>
+              <a href="https://github.com/vuejs/vue-resource" title="vue-resource官网" target="_blank">vue-resource</a>
+              <a href="http://webpack.github.io" title="webpack官网" target="_blank">webpack</a>
             </div>
           </div>
         </div>

@@ -39,7 +39,7 @@
       <div class="author">
         原文链接
         <p>
-          <a href="{{postDetail.originalLink}}">{{postDetail.originalLink}}</a>
+          <a href="{{postDetail.originalLink}}" target="_blank">{{postDetail.originalLink}}</a>
         </p>
       </div>
     </div>
