@@ -22,8 +22,8 @@
           }
           this.time -= 1;
         }, 1000);
-      },
-    },
+      }
+    }
   };
 </script>
 
@@ -36,6 +36,7 @@
       font-size: 4em;
       color: #80BD01;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, .6);
+      margin-bottom: 20px;
     }
 
     p {

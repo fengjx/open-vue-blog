@@ -12,10 +12,6 @@ export default function (router) {
       name: 'index',
       component: PostList
     },
-    '/:page': {       //首页分页
-      name: 'index',
-      component: PostList
-    },
     /* 404路由 */
     '*': {
       component: View404
@@ -28,11 +24,11 @@ export default function (router) {
       name: 'tagCloud',
       component: TagCloud
     },
-    'tag/:id/:page': {
+    'tag/:id': {
       name: 'tag',
       component: TagPosts
     },
-    'category/:id/:page': {
+    'category/:id': {
       name: 'category',
       component: CategoryPosts
     }

@@ -4,7 +4,7 @@
   <nav class="pagination" role="navigation">
     <span class="page-number">
       第 {{page}} 页 &frasl; 共 {{postPageList.total}} 页
-      <a class="older-posts" v-link="{ name: 'index', params: { page: page + 1 }}" >
+      <a class="older-posts" v-link="{ name: 'index', query: { page: page + 1 }}">
         <i class="fa fa-angle-right"></i>
       </a>
     </span>
@@ -33,8 +33,7 @@
     },
     route: {
       data (transition) {
-        let curPage = transition.to.params.page;
-        this.page = curPage ? curPage : 0;
+        this.page = transition.to.query.page ? transition.to.query.page : 1;
         this.loadPostList(this.page);
       }
     },
