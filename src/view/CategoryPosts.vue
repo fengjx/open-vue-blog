@@ -10,14 +10,17 @@
 
   <post-item :item="item" v-for="item in postPageList.rows"></post-item>
 
-  <nav class="pagination" role="navigation">
-    <span class="page-number">第 1 页 &frasl; 共 1 页</span>
-  </nav>
+  <Paginate
+    router="index"
+    :total="postPageList.total"
+    :page="page">
+  </Paginate>
 
 </template>
 
 <script>
   import PostItem from '../components/PostItem.vue'
+  import Paginate from '../components/Paginate.vue'
   import {loadPostList} from '../vuex/actions'
   import {postPageList, categoryCurMenu} from '../vuex/getters'
 
@@ -43,7 +46,8 @@
       }
     },
     components: {
-      PostItem
+      PostItem,
+      Paginate
     }
   }
 </script>

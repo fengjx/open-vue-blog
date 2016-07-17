@@ -1,19 +1,17 @@
 <template>
   <post-item :item="item" v-for="item in postPageList.rows"></post-item>
 
-  <nav class="pagination" role="navigation">
-    <span class="page-number">
-      第 {{page}} 页 &frasl; 共 {{postPageList.total}} 页
-      <a class="older-posts" v-link="{ name: 'index', query: { page: page + 1 }}">
-        <i class="fa fa-angle-right"></i>
-      </a>
-    </span>
-  </nav>
+  <Paginate
+    router="index"
+    :total="postPageList.total"
+    :page="page">
+  </Paginate>
 </template>
 <style>
 </style>
 <script>
   import PostItem from '../components/PostItem.vue'
+  import Paginate from '../components/Paginate.vue'
   import {loadPostList} from '../vuex/actions'
   import {postPageList} from '../vuex/getters'
 
@@ -38,7 +36,8 @@
       }
     },
     components: {
-      PostItem
+      PostItem,
+      Paginate
     }
   }
 
