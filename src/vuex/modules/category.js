@@ -19,6 +19,10 @@ const mutations = {
   },
 
   [CATEGORY_CHANGE] (state, categoryId) {
+    if (!categoryId) {
+      state.curMenu = {};
+      return;
+    }
     _.forEach(state.tree, (obj) => {
       if (obj.id == categoryId) {
         state.curMenu = obj;

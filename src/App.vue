@@ -1,5 +1,5 @@
 <template>
-  <header-com :tree="categoryTree"></header-com>
+  <header-com :tree="categoryTree" :curmenu="categoryCurMenu"></header-com>
   <!-- start site's main content area -->
   <section class="content-wrap">
     <div class="container">
@@ -23,6 +23,15 @@
 
           <!-- start widget -->
           <div class="widget">
+            <h4 class="title">优惠码</h4>
+            <div class="content community">
+              <p><a href="https://www.aliyun.com" target="_blank">阿里云</a>：o2gi8h</p>
+            </div>
+          </div>
+          <!-- end widget -->
+
+          <!-- start widget -->
+          <div class="widget">
             <h4 class="title">关于我</h4>
             <div class="content community">
               <p>QQ：466516623</p>
@@ -36,14 +45,7 @@
             </div>
           </div>
           <!-- end widget -->
-          <!-- start widget -->
-          <div class="widget">
-            <h4 class="title">优惠码</h4>
-            <div class="content community">
-              <p><a href="https://www.aliyun.com" target="_blank">阿里云</a>：o2gi8h</p>
-            </div>
-          </div>
-          <!-- end widget -->
+          
         </aside>
 
       </div>
@@ -65,7 +67,7 @@
   import Loading from './components/Loading.vue'
   import store from './vuex/store'
   import {loadTagList, loadCategoryTree} from './vuex/actions'
-  import {alertMsg, tagsTopList, categoryTree, loading} from './vuex/getters'
+  import {alertMsg, tagsTopList, categoryTree, categoryCurMenu, loading} from './vuex/getters'
 
   export default {
     vuex: {
@@ -73,6 +75,7 @@
         alertMsg,
         tagsTopList,
         categoryTree,
+        categoryCurMenu,
         loading
       },
       actions: {

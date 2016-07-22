@@ -24,6 +24,8 @@ export const loadPostList = ({dispatch}, page = 1, param = {categoryId: "", tagI
   if (param.categoryId) {
     url += `&categoryId=${param.categoryId}`;
     dispatch(types.CATEGORY_CHANGE, param.categoryId);
+  } else {
+    dispatch(types.CATEGORY_CHANGE);
   }
   if (param.tagId) {
     url += `&tagId=${param.tagId}`;

@@ -27,20 +27,22 @@
   };
 </script>
 
-<style lang="scss">
+<style>
   .not-found {
     text-align: center;
     margin-top: 150px;
 
-    div {
-      font-size: 4em;
-      color: #80BD01;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, .6);
-      margin-bottom: 20px;
-    }
-
-    p {
-      color: lighten(#000, 35%);
-    }
   }
+
+  .not-found div{
+    font-size: 4em;
+    color: #f4645f;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, .6);
+    margin-bottom: 20px;
+  }
+
+  .not-found p{
+    color: lighten(#000, 35%);
+  }
+
 </style>

@@ -1,6 +1,6 @@
 <template>
   <nav class="pagination" role="navigation">
-    <a class="newer-posts"
+    <a class="newer-posts" href="javascript:;" 
        v-if="hasPrev"
        @click.prevent="previous">
       <i class="fa fa-angle-left"></i>
@@ -8,7 +8,7 @@
     <span class="page-number">
       第 {{page}} 页 &frasl; 共 {{total}} 页
     </span>
-    <a class="older-posts"
+    <a class="older-posts" href="javascript:;" 
        v-if="hasNext"
        @click.prevent="next">
       <i class="fa fa-angle-right"></i>
