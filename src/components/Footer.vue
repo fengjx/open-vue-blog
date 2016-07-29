@@ -35,7 +35,9 @@
           <div class="widget">
             <h4 class="title">关于博主</h4>
             <div class="content tag-cloud friend-links">
-              <a href="http://fengjx.com/me" title="冯建新" target="_blank">别看我像杀猪的，其实我是写诗的！ </a>
+              <a href="http://fengjx.com/me" title="冯建新" target="_blank">
+                喜欢用技术去实现自己的一些想法，所以前端后台都懂一点点。
+              </a>
             </div>
           </div>
         </div>
@@ -47,7 +49,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <span>Copyright &copy; 冯建新 | <a href="mailto:xd-fjx@qq.com">xd-fjx@qq.com</a></span> |
+          <span>Copyright &copy; 冯建新 | <a href="mailto:xd-fjx@qq.com">fengjianxin2012@gmail.com</a></span> |
           <span><a href="http://www.miibeian.gov.cn/" target="_blank">粤ICP备15021633号-1</a></span>
         </div>
       </div>
