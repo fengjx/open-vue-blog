@@ -5,12 +5,11 @@
 ### 线上预览地址：http://blog.fengjx.com
 
 ### 技术栈
-- vue-cli
-- webpack
-- vue
-- vue-loader
-- vue-router
-- 
+- [vue](http://cn.vuejs.org)
+- [vuex](http://vuex.vuejs.org)
+- [vue-router](http://router.vuejs.org)
+- [vue-resource](https://github.com/vuejs/vue-resource)
+- [bootstrap](http://www.bootcss.com)
 
 ## Build Setup
 
