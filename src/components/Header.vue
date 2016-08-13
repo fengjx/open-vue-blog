@@ -44,13 +44,6 @@
                 </li>
                 <dropdown v-else :menu="menu" v-bind:class="{ 'nav-current': curIndex == index}"></dropdown>
               </template>
-
-              <form class="navbar-form navbar-right" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">搜索</button>
-              </form>
             </ul>
           </div>
         </div>
