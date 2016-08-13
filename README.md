@@ -1,6 +1,6 @@
-# my-blog-vue
+# open-blog-vue
 
-> FengJianxin's blog
+> open vue blog
 
 ## Build Setup
 

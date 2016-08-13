@@ -35,7 +35,7 @@
             <h4 class="title">关于我</h4>
             <div class="content community">
               <p>QQ：466516623</p>
-              <p>email：fengjianxin2012@gmail.com</p>
+              <p>email：xd-fjx@qq.com</p>
               <p>
                 <a href="http://fengjx.com/me" title="冯建新" target="_blank">
                   <i class="fa fa-comments"></i>
