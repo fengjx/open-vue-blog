@@ -2,6 +2,9 @@
 
 > 代码只包含了前端部分，因为后端接口放在了我的另外一个项目上了，暂时不方便开源，后端部分大家可以自己实现下，就几个接口。如果想要数据库表设计，可以联系我
 
+- QQ: 466516623
+- email: xd-fjx@qq.com
+
 ### 线上预览地址：http://blog.fengjx.com
 
 ### 技术栈
@@ -17,13 +20,13 @@
 ## Build Setup
 
 ``` bash
-# install dependencies
+# 安装依赖
 npm install
 
-# serve with hot reload at localhost:8080
+# 本地环境调试，浏览器会自动打开：http://localhost:5000
 npm run dev
 
-# build for production with minification
+# 生产环境打包
 npm run build
 
 # run unit tests
