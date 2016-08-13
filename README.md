@@ -39,4 +39,8 @@ npm run e2e
 npm test
 ```
 
+_如果你安装node依赖出现问题，可尝试使用淘宝的npm包镜像，参考：[ubuntu安装nodejs并配置淘宝 NPM 镜像
+](http://blog.fengjx.com/post/4ad31d1e610c11e69d7c00163e001d4a)_ 
+
+
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
