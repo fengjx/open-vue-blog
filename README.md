@@ -1,6 +1,16 @@
-# open-blog-vue
+# 使用vue编写的博客
 
-> open vue blog
+> 代码只包含了前端部分，因为后端接口放在了我的另外一个项目上了，暂时不方便开源，后端部分大家可以自己实现下，就几个接口。如果想要数据库表设计，可以联系我
+
+### 线上预览地址：http://blog.fengjx.com
+
+### 技术栈
+- vue-cli
+- webpack
+- vue
+- vue-loader
+- vue-router
+- 
 
 ## Build Setup
 
