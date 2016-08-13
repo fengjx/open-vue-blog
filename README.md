@@ -10,6 +10,9 @@
 - [vue-router](http://router.vuejs.org)
 - [vue-resource](https://github.com/vuejs/vue-resource)
 - [bootstrap](http://www.bootcss.com)
+- [lodash](https://lodash.com)
+- [vue-cli](https://github.com/vuejs/vue-cli)
+- [webpack](http://webpack.github.io/)
 
 ## Build Setup
 
