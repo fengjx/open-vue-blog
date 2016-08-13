@@ -12,6 +12,7 @@
 - [vuex](http://vuex.vuejs.org)
 - [vue-router](http://router.vuejs.org)
 - [vue-resource](https://github.com/vuejs/vue-resource)
+- [vue-loader](http://vuejs.github.io/vue-loader)
 - [bootstrap](http://www.bootcss.com)
 - [lodash](https://lodash.com)
 - [vue-cli](https://github.com/vuejs/vue-cli)
